@@ -4,7 +4,7 @@ locals {
   ip_prefix     = "10.0.71"
   # vm_base_image = "Ubuntu Focal Server"
   vm_base_image = "ubuntu 22.04" # Settings -> Image Configuration
-  ssh_public_key = file("~/.ssh/id_rsa_somaz.pub")
+  ssh_public_key = file("~/.ssh/id_rsa.pub")
 
   control_plane_instances = [
     {

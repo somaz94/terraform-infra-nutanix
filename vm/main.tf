@@ -13,7 +13,7 @@ resource "nutanix_virtual_machine" "somaz_test02_master" {
   guest_customization_cloud_init_user_data = base64encode(<<-EOF
     #cloud-config
     users:
-      - name: somaz
+      - name: admin
         sudo: ALL=(ALL) NOPASSWD:ALL
         ssh-authorized-keys:
           - ${local.ssh_public_key}
@@ -55,7 +55,7 @@ resource "nutanix_virtual_machine" "somaz_test02_worker" {
   guest_customization_cloud_init_user_data = base64encode(<<-EOF
     #cloud-config
     users:
-      - name: somaz
+      - name: admin
         sudo: ALL=(ALL) NOPASSWD:ALL
         ssh-authorized-keys:
           - ${local.ssh_public_key}
